@@ -22,4 +22,5 @@ from photo import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^photo/(?P<photo_id>\d+)$', views.single_photo, name='view_single_photo'),
+    url(r'^photo/upload/$', views.new_photo, name='new_photo'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
